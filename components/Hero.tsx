@@ -2,6 +2,14 @@ import React from 'react';
 import RotatingText from './RotatingText';
 
 const Hero: React.FC = () => {
+  const handleScrollToPricing = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('pricing');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="@container mb-12">
       <div className="@[480px]:p-4">
@@ -38,9 +46,13 @@ const Hero: React.FC = () => {
             <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30">
               <span className="truncate">Solicitar Demo</span>
             </button>
-            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-6 bg-white/10 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base border border-white/20 hover:bg-white/20 transition-colors">
-              <span className="truncate">Registrarse</span>
-            </button>
+            <a 
+              href="#pricing"
+              onClick={handleScrollToPricing}
+              className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-6 bg-white/10 backdrop-blur-sm text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base border border-white/20 hover:bg-white/20 transition-colors"
+            >
+              <span className="truncate">Suscribirme</span>
+            </a>
           </div>
         </div>
       </div>

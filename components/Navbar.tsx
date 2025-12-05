@@ -76,9 +76,13 @@ const Navbar: React.FC = () => {
             Testimonios
           </a>
         </div>
-        <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-colors">
-          <span className="truncate">Solicitar Demo</span>
-        </button>
+        <a 
+          href="#pricing"
+          onClick={(e) => handleNavClick(e, 'pricing')}
+          className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary-hover transition-colors"
+        >
+          <span className="truncate">Suscribirme</span>
+        </a>
       </div>
 
       {/* Mobile Navigation Dropdown */}
@@ -105,9 +109,13 @@ const Navbar: React.FC = () => {
           >
             Testimonios
           </a>
-          <button className="w-full h-10 bg-primary text-white rounded-lg font-bold text-sm">
-            Solicitar Demo
-          </button>
+          <a 
+            href="#pricing"
+            onClick={(e) => handleNavClick(e, 'pricing')}
+            className="flex items-center justify-center w-full h-10 bg-primary text-white rounded-lg font-bold text-sm"
+          >
+            Suscribirme
+          </a>
         </div>
       )}
     </header>
