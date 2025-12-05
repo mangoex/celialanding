@@ -1,17 +1,24 @@
 import React from 'react';
 import CardSwap, { Card } from './CardSwap';
+import TextType from './TextType';
 
 const CustomizableAssistant: React.FC = () => {
   return (
     <div className="py-24 px-4 flex flex-col lg:flex-row items-center justify-between gap-16 max-w-[960px] mx-auto overflow-visible mb-20">
       <div className="flex-1 flex flex-col gap-6 text-left relative z-20">
-        <h2 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+        <h2 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] min-h-[200px] md:min-h-auto">
           <span className="text-primary block mb-2">ASISTENTE</span>
-          personalizable,<br />
-          profesional y<br />
-          actualizado.
+          <TextType 
+            text={['personalizable,', 'profesional y', 'actualizado.']}
+            typingSpeed={100}
+            deletingSpeed={50}
+            loop={true}
+            pauseDuration={2000}
+            cursorCharacter="|"
+            className="block h-[1.2em]" // Ensure it takes up vertical space
+          />
         </h2>
-        <p className="text-white/60 text-lg max-w-md leading-relaxed">
+        <p className="text-white/60 text-lg max-w-md leading-relaxed mt-2">
           Configura tu asistente para que se adapte perfectamente a la cultura y necesidades de tu empresa. Desde el tono de voz hasta los protocolos específicos, CeLIA aprende y evoluciona contigo.
         </p>
         <div className="flex gap-3 mt-4">
