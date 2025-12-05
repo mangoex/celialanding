@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "gsap": "latest",
     "ogl": "latest",
-    "framer-motion": "^10.16.16"
+    "framer-motion": "^10.18.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
